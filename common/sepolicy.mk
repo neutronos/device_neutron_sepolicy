@@ -16,20 +16,20 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/pixys/sepolicy/common/public
+    device/neutron/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/pixys/sepolicy/common/private
+    device/neutron/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/pixys/sepolicy/common/dynamic \
-    device/pixys/sepolicy/common/system
+    device/neutron/sepolicy/common/dynamic \
+    device/neutron/sepolicy/common/system
 else
 BOARD_SEPOLICY_DIRS += \
-    device/pixys/sepolicy/common/dynamic \
-    device/pixys/sepolicy/common/vendor
+    device/neutron/sepolicy/common/dynamic \
+    device/neutron/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/pixys/sepolicy/legacy-common/sepolicy.mk
+-include device/neutron/sepolicy/legacy-common/sepolicy.mk
